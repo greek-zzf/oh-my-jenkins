@@ -8,6 +8,7 @@ class OhMyJenkinsApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("smoke test");
     }
 
 }
