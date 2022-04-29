@@ -1,7 +1,7 @@
 pipeline {
      agent any
      triggers {
-          pollSCM('* 0/10 * * *')
+          pollSCM('* * * * *')
      }
      stages {
         stage('Test') {
@@ -18,7 +18,7 @@ pipeline {
 
                 unstash 'app'
                 script {
-                    def customImage = docker.build("ip:5002/jenkins-test:${new Date().format('yyyy-MM-dd-HH-mm-ss')}")
+                    def customImage = docker.build("192.168.20.112:5000/jenkins-test:${new Date().format('yyyy-MM-dd-HH-mm-ss')}")
                     customImage.push()
                 }
            }
