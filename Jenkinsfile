@@ -18,7 +18,7 @@ pipeline {
 
                 unstash 'app'
                 script {
-                    def customImage = docker.build("192.168.20.112:5000/jenkins-test:${new Date().format('yyyy-MM-dd-HH-mm-ss')}")
+                    def customImage = docker.build("192.168.20.112:5000/oh-my-jenkins:${new Date().format('yyyy-MM-dd-HH-mm-ss')}")
                     customImage.push()
                 }
            }
