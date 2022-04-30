@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloJenkinsController {
     @GetMapping("/index")
     public String helloJenkins() {
-        return "oh-my-jenkins-hello";
+        return "oh-my-jenkins";
     }
 }
